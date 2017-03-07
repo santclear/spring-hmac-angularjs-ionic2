@@ -5,6 +5,7 @@
 - Spring Security
 - Spring MVC
 - Angular 2.2.0
+- Ionic 2.1.0
 
 #Features
 - Token based authentication
