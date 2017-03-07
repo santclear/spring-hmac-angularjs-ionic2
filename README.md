@@ -39,3 +39,9 @@ $ npm install
 $ ionic serve
 - Then go to http://localhost:8100
 - More info http://ionicframework.com/docs/v2/api/
+````
+
+###Credits
+
+[Red Froggy](https://github.com/RedFroggy)
+
