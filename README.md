@@ -1,4 +1,4 @@
-#HMAC Implementation using Spring, Hmac, AngularJS and Ionic 2
+#HMAC Implementation using Spring, AngularJS and Ionic 2
 
 #Stack
 - Spring Boot
