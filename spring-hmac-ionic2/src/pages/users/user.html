@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button color="dark" clear (click)="cancel()">Voltar</button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+        <ion-item>
+            <ion-label>Login</ion-label>
+            <ion-input type="text" [(ngModel)]="user.login" formControlName="login" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Profile</ion-label>
+            <ion-select [(ngModel)]="user.profile" formControlName="profile" required>
+                <ion-option *ngFor="let profile of profiles" [value]="profile">{{profile}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <button ion-button type="submit" is-authorized [isAuthorized]="'ROLE_ADMIN'" [disabled]="!userForm.valid">Save</button>
+    </form>
+    <!--<button ion-button color="danger" (click)="cancel()">Cancel</button>-->
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Created by Sant'Clear</ion-title>
+        <div class="description">Full Stack Developer
+            <![CDATA[<santclear@gmail.com>]]>
+        </div>
+        <div class="sub"><a href="http://www.sinaldasorte.com">www.sinaldasorte.com | coming soon</a></div>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,32 @@
+<header [authenticatedInput]="authenticated" (logoutOutput)="logout($event)"></header>
+
+<ion-content padding>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <th>#</th>
+                    <th>Login</th>
+                    <th>Profile</th>
+                    <th is-authorized [isAuthorized]="'ROLE_ADMIN'">Authorities</th>
+                </tr>
+                <tr *ngFor='let user of users'>
+                    <td>{{user.id}}</td>
+                    <td><button ion-button clear item-right (click)="onSelectUser($event,user.id)">{{user.login}}</button></td>
+                    <td>{{user.profile}}</td>
+                    <td is-authorized [isAuthorized]="'ROLE_ADMIN'">{{user.authorities.join(',')}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Created by Sant'Clear</ion-title>
+        <div class="description">Full Stack Developer
+            <![CDATA[<santclear@gmail.com>]]>
+        </div>
+        <div class="sub"><a href="http://www.sinaldasorte.com">www.sinaldasorte.com | coming soon</a></div>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Sample app using Spring, AngularJS and Ionic 2</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-input [(ngModel)]="username" type="text" placeholder="Username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full (click)="authenticate()">Submit</button>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Created by Sant'Clear</ion-title>
+        <div class="description">Full Stack Developer
+            <![CDATA[<santclear@gmail.com>]]>
+        </div>
+        <div class="sub"><a href="http://www.sinaldasorte.com">www.sinaldasorte.com | coming soon</a></div>
+    </ion-toolbar>
+</ion-footer>
