@@ -17,10 +17,10 @@
 - Cors configured
 
 #Credentials
-sinaldasorte/sant => role ADMIN
-admin/sant => role ADMIN
-manager/sant => role MANAGER
-user/sant => role USER
+- sinaldasorte/sant => role ADMIN
+- admin/sant => role ADMIN
+- manager/sant => role MANAGER
+- user/sant => role USER
 
 #To run Java unit tests
 ````bash
